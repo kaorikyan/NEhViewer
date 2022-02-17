@@ -1,6 +1,6 @@
-import { isAbsolute, join } from "path";
-import { existsSync, constants as fsconst } from "fs";
-import { readFile, access } from "fs/promises";
+import { isAbsolute, join } from "node:path";
+import { existsSync, constants as fsconst } from "node:fs";
+import { readFile, access } from "node:fs/promises";
 
 export class CookieJar {
 

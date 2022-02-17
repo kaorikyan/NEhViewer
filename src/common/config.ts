@@ -1,7 +1,7 @@
 import { existsSync, constants as fsconst } from "node:fs";
 import { writeFile, readFile, access } from "node:fs/promises";
 import { dirname, isAbsolute, join } from "node:path";
-import { homedir, tmpdir } from "os";
+import { homedir, tmpdir } from "node:os";
 
 export interface IConfig {
     [key: string]: any;
