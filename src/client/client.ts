@@ -1,4 +1,5 @@
-import { IConfig } from "../common/config";
+import Axios from "axios";
+import { IConfig } from "../config";
 
 export class Client {
 
@@ -7,7 +8,9 @@ export class Client {
     constructor(
         private readonly config: IConfig,
     ) {
+        Axios.create({
 
+        })
     }
 
 }

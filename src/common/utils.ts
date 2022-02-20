@@ -2,7 +2,7 @@ import { homedir, tmpdir } from "node:os";
 import { dirname, isAbsolute, join } from "node:path";
 
 export function getAppPath() {
-    return require.main?.path ?? process.execPath;
+    return join(__dirname, '../..');
 }
 
 export function getPath(name: 'home' | 'temp' | 'appData') {
@@ -12,7 +12,7 @@ export function getPath(name: 'home' | 'temp' | 'appData') {
         case 'temp':
             return tmpdir();
         case 'appData':
-            return dirname(getAppPath());
+            return 
         default:
             break;
     }

@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "required": [
+        "store"
+    ],
+    "properties": {
+        "store": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "data",
+                "temp",
+                "cache",
+                "log",
+                "database",
+                "download"
+            ],
+            "properties": {
+                "data": {
+                    "type": "string"
+                },
+                "temp": {
+                    "type": "string"
+                },
+                "cache": {
+                    "type": "string"
+                },
+                "log": {
+                    "type": "string"
+                },
+                "database": {
+                    "type": "string"
+                },
+                "download": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

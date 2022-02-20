@@ -1,5 +1,17 @@
-import { getAppPath, getPath } from "./common/utils";
+import { Command } from "commander";
+import i18n from "./common/i18n";
 
-console.log(`AppPath: ${getAppPath()}`);
-console.log(`HomePath: ${getPath('home')}`);
-console.log(`TempPath: ${getPath('temp')}`);
+const program = new Command('NEhViewer');
+
+// program
+//     .name('NEhViewer');
+
+program
+    .command('test')
+    .argument('<what>', i18n.__('CLI.TEST.WHAT'))
+    .option('-t, --test', 'test')
+    .action(() => {
+        console.log('test');
+    });
+
+program.parse();
