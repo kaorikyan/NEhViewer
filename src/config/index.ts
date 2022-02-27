@@ -1,5 +1,5 @@
 import Conf, { Schema } from "conf";
-import StoreSchema from "./schema/store.schema.json";
+import StoreSchema from "./schema/config.schema.json";
 
 export interface IConfigStorage {
     data: string;
